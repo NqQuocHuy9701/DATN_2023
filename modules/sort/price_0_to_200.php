@@ -1,4 +1,5 @@
 <?php
+
 get_header();
 
 
@@ -6,15 +7,19 @@ get_header();
 $Listproduct = get_0_200();
 // show_array($Listproduct);
 
-
 ?>
 <?php
 // phân trang
 if (isset($_GET['id'])) {
+	// var_dump("1111");
+	// die();
 	$id_loai = $_GET['id'];
 	$number_rows = db_num_rows("SELECT * FROM sanpham where maloai= $id_loai and trangthai = 1 and gia between 0 and 200000");
 	// echo $number_rows;	
 } else {
+	// var_dump("222222222");
+	// die();
+	// $number_rows = 6;
 	$number_rows = count($Listproduct);
 }
 

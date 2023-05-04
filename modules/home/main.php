@@ -210,7 +210,7 @@ $get_Blog = get_Blog_index();
                                     <?php echo $featured_products['tensp'] ?>
                                 </a>
                                 <span class="block2-price m-text6 p-r-5">
-                                    $<?php echo $featured_products['gia'] ?>
+                                    <?php echo $featured_products['gia'] ?> VND
                                 </span>
                             </div>
                         </div>
@@ -339,7 +339,7 @@ $get_Blog = get_Blog_index();
                             </h4>
                             <span class="s-text6">By</span> <span class="s-text7"><?php echo $list_blog['nguoiviet'] ?></span>
                             <span class="s-text6">on</span> <span class="s-text7"><?php echo $list_blog['created'] ?></span>
-                            <p class="s-text8 p-t-16">
+                            <p class=" p-t-16">
                                 <?php echo $list_blog['keyword'] ?>
                             </p>
                         </div>

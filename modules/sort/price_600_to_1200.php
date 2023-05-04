@@ -11,7 +11,7 @@ $Listproduct = get_600_1200();
 // phân trang
 if (isset($_GET['id'])) {
 	$id_loai = $_GET['id'];
-	$number_rows = db_num_rows("SELECT * FROM sanpham where maloai= $id_loai and trangthai = 1 and gia between 600 and 1200");
+	$number_rows = db_num_rows("SELECT * FROM sanpham where maloai= $id_loai and trangthai = 1 and gia between 600000 and 1200000");
 	// echo $number_rows;	
 } else {
 	$number_rows = count($Listproduct);

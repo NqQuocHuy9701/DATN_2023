@@ -211,7 +211,7 @@ $list_buy = get_list_by_cart();
                     ?>
                         <div class="size15 trans-0-4">
                             <!-- Button -->
-                            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="">
+                            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
                                 <a href="?mod=cart&act=checkout" style="color: white">Proceed to Checkout</a>
                             </button>
                         </div>
@@ -220,7 +220,7 @@ $list_buy = get_list_by_cart();
                     ?>
                         <div class="size15 trans-0-4">
                             <!-- Button -->
-                            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="">
+                            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
                                 <a href="?mod=users&act=login" style="color: white">Login to checkout</a>
                             </button>
                         </div>
