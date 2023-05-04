@@ -1,12 +1,11 @@
+<?php
 
-<?php 
-
-require_once __DIR__. "/autoload/autoload.php";
+require_once __DIR__ . "/autoload/autoload.php";
 // $allproduct = intval($db->fetchsql('SELECT COUNT(*) as SL FROM `sanpham`'));
 
 ?>
 
-<?php require_once __DIR__. "/layouts/header.php";?>
+<?php require_once __DIR__ . "/layouts/header.php"; ?>
 <!-- Page Heading  NOI DUNG-->
 
 
@@ -17,7 +16,7 @@ require_once __DIR__. "/autoload/autoload.php";
 		</h1>
 		<ol class="breadcrumb">
 			<li>
-				<i class="fa fa-dashboard"></i>  <a href="index.php">Điều khiển</a>
+				<i class="fa fa-dashboard"></i> <a href="index.php">Điều khiển</a>
 			</li>
 			<li class="active">
 				<i class="fa fa-file"></i> Thông tin
@@ -27,7 +26,7 @@ require_once __DIR__. "/autoload/autoload.php";
 </div>
 <!-- /.row -->
 <div class="row">
-		<div class="col-lg-3 col-md-6">
+	<div class="col-lg-3 col-md-6">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<div class="row">
@@ -36,12 +35,12 @@ require_once __DIR__. "/autoload/autoload.php";
 					</div>
 					<div class="col-xs-9 text-right">
 						<div class="huge"><?php require '../db/connect.php';
-						$sql = "SELECT COUNT(*)as tongsanpham FROM `sanpham` WHERE 1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								echo $rows['tongsanpham'];
-						} ?></div>
+											$sql = "SELECT COUNT(*)as tongsanpham FROM `sanpham` WHERE 1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													echo $rows['tongsanpham'];
+												} ?></div>
 						<div>Tổng sản phẩm</div>
 					</div>
 				</div>
@@ -64,12 +63,12 @@ require_once __DIR__. "/autoload/autoload.php";
 					</div>
 					<div class="col-xs-9 text-right">
 						<div class="huge"><?php require '../db/connect.php';
-						$sql = "SELECT COUNT(*)as tongbaiviet FROM `baiviet` WHERE 1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								echo $rows['tongbaiviet'];
-						} ?></div>
+											$sql = "SELECT COUNT(*)as tongbaiviet FROM `baiviet` WHERE 1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													echo $rows['tongbaiviet'];
+												} ?></div>
 						<div>Tổng bài viết</div>
 
 					</div>
@@ -95,12 +94,12 @@ require_once __DIR__. "/autoload/autoload.php";
 					</div>
 					<div class="col-xs-9 text-right">
 						<div class="huge"><?php require '../db/connect.php';
-						$sql = "SELECT COUNT(*)as tonghoadon FROM `hoadon` WHERE status = 1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								echo $rows['tonghoadon'];
-						} ?></div>
+											$sql = "SELECT COUNT(*)as tonghoadon FROM `hoadon` WHERE status = 1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													echo $rows['tonghoadon'];
+												} ?></div>
 						<div>Tổng hóa đơn</div>
 					</div>
 				</div>
@@ -124,20 +123,17 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
-						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` where status=1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								if($rows['tongtien']==NULL)
-								{
-									echo '0';
-								}
-								else
-								{
-									echo $rows['tongtien'];
-								}
-						} ?></div>
+						<div class="huge"><?php require '../db/connect.php';
+											$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` where status=1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													if ($rows['tongtien'] == NULL) {
+														echo '0';
+													} else {
+														echo $rows['tongtien'];
+													}
+												} ?>đ</div>
 						<div>Tổng Tiền Hóa Đơn</div>
 					</div>
 				</div>
@@ -152,7 +148,7 @@ require_once __DIR__. "/autoload/autoload.php";
 		</div>
 	</div>
 
-		<div class="col-lg-3 col-md-6">
+	<div class="col-lg-3 col-md-6">
 		<div class="panel panel-red">
 			<div class="panel-heading">
 				<div class="row">
@@ -160,24 +156,20 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
-						 $date = getdate();
-						 $day = $date['mday'];
-						 // echo $day;
-						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE DAY (created_at)=$day and status=1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								if($rows['tongtien']==NULL)
-								{
-									echo '0';
-								}
-								else
-								{
-									echo $rows['tongtien'];
-								}
-								
-						} ?></div>
+						<div class="huge"><?php require '../db/connect.php';
+											$date = getdate();
+											$day = $date['mday'];
+											// echo $day;
+											$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE DAY (created_at)=$day and status=1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													if ($rows['tongtien'] == NULL) {
+														echo '0';
+													} else {
+														echo $rows['tongtien'];
+													}
+												} ?>đ</div>
 						<div> Hóa Đơn Theo Ngày</div>
 					</div>
 				</div>
@@ -200,22 +192,19 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
-						 $date = getdate();
-						 $mon = $date['mon'];
-						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE MONTH (created_at)=$mon  and status=1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								if($rows['tongtien']==NULL)
-								{
-									echo '0';
-								}
-								else
-								{
-									echo $rows['tongtien'];
-								}
-						} ?></div>
+						<div class="huge"><?php require '../db/connect.php';
+											$date = getdate();
+											$mon = $date['mon'];
+											$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE MONTH (created_at)=$mon  and status=1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													if ($rows['tongtien'] == NULL) {
+														echo '0';
+													} else {
+														echo $rows['tongtien'];
+													}
+												} ?>đ</div>
 						<div> Hóa Đơn Theo Tháng</div>
 					</div>
 				</div>
@@ -238,22 +227,19 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
-						 $date = getdate();
-						 $year = $date['year'];
-						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE YEAR (created_at)=$year  and status=1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								if($rows['tongtien']==NULL)
-								{
-									echo '0';
-								}
-								else
-								{
-									echo $rows['tongtien'];
-								}
-						} ?></div>
+						<div class="huge"><?php require '../db/connect.php';
+											$date = getdate();
+											$year = $date['year'];
+											$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE YEAR (created_at)=$year  and status=1";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0)
+												while ($rows = $result->fetch_assoc()) {
+													if ($rows['tongtien'] == NULL) {
+														echo '0';
+													} else {
+														echo $rows['tongtien'];
+													}
+												} ?>đ</div>
 						<div> Hóa Đơn Theo Năm</div>
 					</div>
 				</div>
@@ -271,4 +257,4 @@ require_once __DIR__. "/autoload/autoload.php";
 
 
 </div>
-<?php require_once __DIR__. "/layouts/footer.php";?>
+<?php require_once __DIR__ . "/layouts/footer.php"; ?>

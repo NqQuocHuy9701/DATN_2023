@@ -109,7 +109,7 @@ $Listproductdetail = get_Listproductdetail($id_sp);
                                 </button>
                                 <script>
                                     function updateItem(id) {
-                                        sl = $("#sl_" + id).val();
+                                        sl = VND("#sl_" + id).val();
                                         sl++;
                                         // alert(sl);
                                         // gia = $("#gia_"+id).html();
@@ -119,14 +119,14 @@ $Listproductdetail = get_Listproductdetail($id_sp);
                                     }
 
                                     function updateItem1(id) {
-                                        sl = $("#sl_" + id).val();
+                                        sl = VND("#sl_" + id).val();
                                         sl--;
                                         // alert(sl);
 
                                     }
 
                                     function updateItem2(id) {
-                                        sl = $("#sl_" + id).val();
+                                        sl = VND("#sl_" + id).val();
                                         $.get("?mod=cart&act=add_to_cart&maloai=<?php echo $Listproductdetail['maloai']; ?>&id=<?php echo $Listproductdetail['id']; ?>", {
                                             'sl': sl
                                         })

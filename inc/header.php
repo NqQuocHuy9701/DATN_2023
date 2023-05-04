@@ -190,7 +190,7 @@
                                                     <?php echo $item['tensp'] ?>
                                                 </a>
                                                 <span class="header-cart-item-info">
-                                                    <?php echo $item['soluong']; ?> x $<?php echo $item['gia'] ?>
+                                                    <?php echo $item['soluong']; ?> x <?php echo $item['gia'] ?> VND
                                                 </span>
                                             </div>
                                         </li>
@@ -203,7 +203,7 @@
                                 ?>
                             </ul>
                             <div class="header-cart-total">
-                                Total: $ <?php echo get_total_cart(); ?>
+                                Total: <?php echo get_total_cart(); ?> VND
                             </div>
                             <div class="header-cart-buttons">
                                 <div class="header-cart-wrapbtn">

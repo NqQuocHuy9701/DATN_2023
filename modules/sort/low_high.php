@@ -96,11 +96,11 @@ $default_sorting = get_default();
 						<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 							<select class="selection-2 city1" name="sorting">
 								<option>Price</option>
-								<option value="1">0.00 VND - 200.00 VND</option>
-								<option value="2">200.00 VND - 600.00 VND</option>
-								<option value="3">600.00 VND - 1200.00 VND</option>
-								<option value="4">1200.00 VND - 2000.00 VND</option>
-								<option value="5">2000.00+ VND</option>
+								<option value="1">0.00 VND - 200.000 VND</option>
+								<option value="2">200.000 VND - 600.000 VND</option>
+								<option value="3">600.000 VND - 1.200.000 VND</option>
+								<option value="4">1.200.000 VND - 2.000.000 VND</option>
+								<option value="5">2.000.000+ VND</option>
 							</select>
 							<script type="text/javascript">
 								$(document).ready(function() {
