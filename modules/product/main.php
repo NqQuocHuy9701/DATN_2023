@@ -25,7 +25,7 @@ $default_sorting = get_default();
         Fashion
     </h2>
     <p class="m-text13 t-center">
-        New Arrivals Collection 2019
+        New Arrivals Collection 2023
     </p>
 </section>
 <!-- Content page -->

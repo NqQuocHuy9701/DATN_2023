@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,23 @@
     <meta name="author" content="">
     <title>Trang Admin</title>
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url()?>public/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>public/admin/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?php echo base_url()?>public/admin/css/sb-admin.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>public/admin/css/sb-admin.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="<?php echo base_url()?>public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+    <link href="<?php echo base_url() ?>public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="<?php echo base_url()?>admin/modules/baiviet/ckeditor/ckeditor.js" type="text/javascript"></script>
+
+    <script src="<?php echo base_url() ?>admin/modules/baiviet/ckeditor/ckeditor.js" type="text/javascript"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="wrapper">
         <!-- Navigation -->
@@ -59,19 +58,15 @@
                         <li>
                             <sqan onclick="logout()" style="cursor: pointer;    padding-left: 21px;"><i class="fa fa-fw fa-power-off"></i> Log Out</sqan>
                         </li>
-                          <script>
-                                                function logout()
-                                                {
-                                                    if(confirm("Are you sure?")==true)
-                                                    {
-                                                        window.location="/EMMY/admin/thoat.php";
-                                                    }
-                                                    else
-                                                    {
+                        <script>
+                            function logout() {
+                                if (confirm("Are you sure?") == true) {
+                                    window.location = "/EMMY/admin/thoat.php";
+                                } else {
 
-                                                    }
-                                                }
-                                            </script>
+                                }
+                            }
+                        </script>
                     </ul>
                 </li>
             </ul>
@@ -83,46 +78,46 @@
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'loaisanpham' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("loaisanpham")?>"><i class="fa fa-list"></i>  Danh mục sản phẩm</a>
+                        <a href="<?php echo modules("loaisanpham") ?>"><i class="fa fa-list"></i> Danh mục sản phẩm</a>
                     </li>
 
 
                     <li class="<?php echo isset($open) && $open == 'sanpham' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("sanpham")?>"> <i class="fa fa-database"> </i>  Sản phẩm</a>
+                        <a href="<?php echo modules("sanpham") ?>"> <i class="fa fa-database"> </i> Sản phẩm</a>
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'hinhanhsanpham' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("hinhanhsanpham")?>"> <i class="fa fa-picture-o"> </i> Hình ảnh  Sản phẩm</a>
+                        <a href="<?php echo modules("hinhanhsanpham") ?>"> <i class="fa fa-picture-o"> </i> Hình ảnh Sản phẩm</a>
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'danhmucbaiviet' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("danhmucbaiviet")?>"> <i class="fa fa-book"> </i> Danh mục  Bài viết</a>
+                        <a href="<?php echo modules("danhmucbaiviet") ?>"> <i class="fa fa-book"> </i> Danh mục Bài viết</a>
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'baiviet' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("baiviet")?>"> <i class="fa fa-bookmark"> </i>    Bài viết</a>
+                        <a href="<?php echo modules("baiviet") ?>"> <i class="fa fa-bookmark"> </i> Bài viết</a>
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'thanhvien' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("thanhvien")?>"> <i class="fa fa-user"> </i>  Admin</a>
+                        <a href="<?php echo modules("thanhvien") ?>"> <i class="fa fa-user"> </i> Admin</a>
                     </li>
 
                     <li class="<?php echo isset($open) && $open == 'user' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("user")?>"> <i class="fa fa-users"> </i>  Người dùng</a>
+                        <a href="<?php echo modules("user") ?>"> <i class="fa fa-users"> </i> Người dùng</a>
                     </li>
 
 
                     <li class="<?php echo isset($open) && $open == 'donhang' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("donhang")?>"> <i class="fa fa-shopping-cart"> </i>  Quản lý Hóa Đơn</a>
+                        <a href="<?php echo modules("donhang") ?>"> <i class="fa fa-shopping-cart"> </i> Quản lý Đơn Hàng</a>
                     </li>
 
 
                     <li class="<?php echo isset($open) && $open == 'danhsachhoadon' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("danhsachhoadon")?>"> <i class="fa fa-calendar-o"> </i>  Danh sách đơn hàng</a>
+                        <a href="<?php echo modules("danhsachhoadon") ?>"> <i class="fa fa-calendar-o"> </i> Danh sách Hóa Đơn</a>
                     </li>
 
-                     <li class="<?php echo isset($open) && $open == 'banner' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("banner")?>"> <i class="fa fa-list-alt"> </i>  Danh sách slider</a>
+                    <li class="<?php echo isset($open) && $open == 'banner' ? 'active' : '' ?>">
+                        <a href="<?php echo modules("banner") ?>"> <i class="fa fa-list-alt"> </i> Danh sách slider</a>
                     </li>
 
 

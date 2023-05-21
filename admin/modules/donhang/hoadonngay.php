@@ -49,7 +49,7 @@ if (isset($cthoadon['page'])) {
 				<i class="fa fa-dashboard"></i> <a href="index.html">Bảng điều khiển</a>
 			</li>
 			<li class="active">
-				<i class="fa fa-file"></i> Quản lý hóa đơn
+				<i class="fa fa-file"></i> Quản lý Đơn Hàng
 			</li>
 
 
@@ -117,7 +117,7 @@ if (isset($cthoadon['page'])) {
 				<?php } else {
 				?><h1 style="text-align: center;">Không có hóa đơn</h1> <?php
 
-																		} ?>
+																	} ?>
 			</table>
 			<?php
 			if (!empty($cthoadon)) {
