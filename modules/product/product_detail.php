@@ -136,7 +136,7 @@ $Listproductdetail = get_Listproductdetail($id_sp);
 
                                     function updateItem3(id) {
 
-                                        alert('Available: 0 products so can not buy');
+                                        alert('HẾT HÀNG ! Vui lòng liên hệ hotline: 0344234233 để đặt mua trước sản phẩm ! Xin cảm ơn');
 
                                     }
                                 </script>
